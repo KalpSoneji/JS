@@ -1,5 +1,5 @@
-var a = prompt("Enter 1st number: ");
-var b = prompt("Enter 2nd number: ");
+var a = parseInt(prompt("Enter 1st number: "));
+var b = parseInt(prompt("Enter 2nd number: "));
 
 console.log(a);
 console.log(b);
