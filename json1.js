@@ -1,4 +1,4 @@
-let whatsapp = {
+let Whatsapp = {
     chats: {
         chat1: {
             fname: "Vatsal",
@@ -30,4 +30,4 @@ let whatsapp = {
     }
 }
 
-console.log(whatsapp.chats.chat1.number[0]);
+console.log(Whatsapp.chats.chat1.number[0]);
