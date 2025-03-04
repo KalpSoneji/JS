@@ -1,8 +1,8 @@
-const pdfHandler = (option) => option.fname + " is a pdf file";
+const pdfHandler = (option) => option.fname + " is a pdf file with size " + option.size;
 
-const docxHandler = (option) => option.fname + " is a docx file";
+const docxHandler = (option) => option.fname + " is a docx file with size " + option.size;
 
-const txtHandler = (option) => option.fname + " is a txt file";
+const txtHandler = (option) => option.fname + " is a txt file with size " + option.size;
 
 const Handler = (file, cb) => {
     var result = cb({
