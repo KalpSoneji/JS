@@ -1,37 +1,20 @@
-function demo(){
-    console.log("demo function called..."); 
+function main(){
+    console.log("Hey there!");
 }
 
-function test(x){
-    // console.log(x);
-
-    // x()
+function cb(x){
+    x();
 }
 
-
-// test(10)
-// test("rahul")
-// test(12.445)
-// test(true)
-
-test(demo())
+cb(main);
 
 //OR
 
-function demo(){
-    console.log("demo function called..."); 
-}
+// function cb(x){
+//     console.log(x);
+    
+// }
 
-function test(x){
-    // console.log(x);
-
-    x()
-}
-
-
-// test(10)
-// test("rahul")
-// test(12.445)
-// test(true)
-
-test(demo)
+// cb("Noice");
+// cb(true);
+// cb({Name: "Kalp", Marks: 100, Presence: true});
