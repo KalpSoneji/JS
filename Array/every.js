@@ -13,4 +13,4 @@ var x = users.every((user) => user.startsWith("p"));
 console.log(x);
 
 //this is false coz not every name starts with p
-//some and every will. return only boolean values
+//some and every will return only boolean values

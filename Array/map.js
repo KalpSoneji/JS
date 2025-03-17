@@ -2,8 +2,15 @@
 
 var users = ["vraj","dhwanit","param","charan","rahul","priya","jiya"];
 
-var x = users.map((user) => {
-    return user.toUpperCase();
+// var x = users.map((user) => {
+//     return user.toUpperCase();
+// })
+
+// console.log(x);
+
+var newArray = [];
+users.forEach((user) => {
+    newArray.push(user);
 })
 
-console.log(x);
+console.log(newArray);
