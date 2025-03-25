@@ -1,12 +1,12 @@
 var language = ["hindi","english","marathi","finnish","french","urdu","tamil","telgu"];
 
-const deleteLang = (langName)=>{
-    return language.filter((lang)=>{
-        return lang!== langName;
+const deleteLang = (langName) => {
+    return language.filter((lang) => {
+        return lang !== langName;
     })
 }
 
-var x = deleteLang("telgu")
+var x = deleteLang("marathi");
 console.log(x);
 
 // const deleteLang = (langName)=>{
