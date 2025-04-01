@@ -128,15 +128,87 @@ var company = [
         ]
     }
     
-]
+];
 
-// 1.  Find the total number of employees in all companies.
+// 1. Find the total number of employees in all companies.
+let totalEmployee = 0;
+company.forEach((comp) => {
+    return totalEmployee += comp.employee.length;
+});
+console.log("Total number of employees:", totalEmployees);
+
 // 2. Find the company where the employee named "riya" works.
-// 3. Calculate the average salary of employees across all companies.
-// 4. Find the names of all employees who are married.
-// 5. Count the total number of children across all employees
-// 7. List all female employees.
-// 8. Count how many employees are not married.
-// 9. Find the email addresses of all employees earning more than 30,000.
-// 10. Identify the total number of employees for each company.
+let companyOfRiya = company.find((comp) => {
+    return comp.employees.some((emp) => emp.name === "riya");
+});
+console.log("Company where Riya works:", companyOfRiya.name);
 
+// 3. Calculate the average salary of employees across all companies.
+let totalSalary = 0;
+let totalEmployees = 0;
+company.forEach((comp) => {
+    comp.employees.forEach((emp) => {
+        totalSalary += emp.salary;
+        totalEmployees++;
+    });
+});
+let averageSalary = totalSalary / totalEmployees;
+console.log("Average salary of employees:", averageSalary);
+
+// 4. Find the names of all employees who are married.
+let marriedEmployees = [];
+company.forEach((comp) => {
+    comp.employees.forEach((emp) => {
+        if (emp.IsMarried) {
+            marriedEmployees.push(emp.name);
+        }
+    });
+});
+console.log("Names of married employees:", marriedEmployees);
+
+// 5. Count the total number of children across all employees
+let totalChildren = 0;
+company.forEach((comp) => {
+    comp.employees.forEach((emp) => {
+        totalChildren += emp.child;
+    });
+});
+console.log("Total number of children:", totalChildren);
+
+// 7. List all female employees.
+let femaleEmployees = [];
+company.forEach((comp) => {
+    comp.employees.forEach((emp) => {
+        if (emp.gender === "female") {
+            femaleEmployees.push(emp.name);
+        }
+    });
+});
+console.log("Names of female employees:", femaleEmployees);
+
+// 8. Count how many employees are not married.
+let unmarriedEmployees = 0;
+company.forEach((comp) => {
+    comp.employees.forEach((emp) => {
+        if (!emp.IsMarried) {
+            unmarriedEmployees++;
+        }
+    });
+});
+console.log("Number of unmarried employees:", unmarriedEmployees);
+
+// 9. Find the email addresses of all employees earning more than 30,000.
+let highSalaryEmployees = [];
+company.forEach((comp) => {
+    comp.employees.forEach((emp) => {
+        if (emp.salary > 30000) {
+            highSalaryEmployees.push(emp.email);
+        }
+    });
+});
+console.log("Email addresses of high salary employees:", highSalaryEmployees);
+
+// 10. Identify the total number of employees for each company.
+company.forEach((comp) => {
+    console.log(`Total employees in ${comp.name}: ${comp.employees.length}`);
+});
