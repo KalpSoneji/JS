@@ -10,7 +10,7 @@ function imgChange(){
 
     //imgArray[Math.floor(Math.random() * 5)];
 
-    img.src = "../Images/" +  imgArray[randomIndex]
+    img.src = "../Images/" + imgArray[randomIndex];
     
 
 }
