@@ -2,7 +2,6 @@ function showForm() {
     const container = document.getElementById("formContainer");
     const existingForm = document.getElementById("userForm");
 
-    // Check if the form already exists, if so, remove it
     if (existingForm) {
         container.removeChild(existingForm);
         return;
