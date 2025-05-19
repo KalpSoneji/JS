@@ -69,9 +69,28 @@ function showForm() {
     form.addEventListener("submit", function(e) {
         e.preventDefault();
 
-        const name = nameInput.value;
-        const age = ageInput.value;
-        const gender = genderInput.value;
+        const name = nameInput.value.trim();
+        const age = ageInput.value.trim();
+        const gender = genderInput.value.trim();
+
+        const nameRegex = /^[A-Za-z\s]+$/;
+        const ageRegex = /^(1[0-9]{1,2}|[1-9][0-9]?)$/;
+        const genderRegex = /^(Male|Female|Other)$/i;
+
+        if (!nameRegex.test(name)) {
+            alert("Invalid name. Only alphabets and spaces are allowed.");
+            return;
+        }
+
+        if (!ageRegex.test(age)) {
+            alert("Invalid age. Enter a valid age between 1 and 120.");
+            return;
+        }
+
+        if (!genderRegex.test(gender)) {
+            alert("Invalid gender. Acceptable values are Male, Female, Other.");
+            return;
+        }
 
         const resultContainer = document.getElementById("resultContainer") || document.createElement("div");
         resultContainer.id = "resultContainer";
