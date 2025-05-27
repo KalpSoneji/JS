@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stone Paper Scissor</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <h1>Stone Paper Scissor</h1>
+
+    <div class="game-container">
+        <button onclick="play('stone')">🪨 Stone</button>
+        <button onclick="play('paper')">📄 Paper</button>
+        <button onclick="play('scissor')">✂️ Scissor</button>
+    </div>
+
+    <div class="result">
+        <p id="winner">Result: -</p>
+    </div>
+
+    <table class="score-board">
+        <thead>
+            <tr>
+                <th>Player</th>
+                <th>Score</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>You</td>
+                <td id="user-score">0</td>
+            </tr>
+            <tr>
+                <td>Computer</td>
+                <td id="computer-score">0</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        let userScore = 0;
+        let computerScore = 0;
+
+        function play(userChoice) {
+            const choices = ['stone', 'paper', 'scissor'];
+            const computerChoice = choices[Math.floor(Math.random() * 3)];
+
+            let result = '';
+
+            if (userChoice === computerChoice) {
+                result = "It's a draw!";
+            } else if (
+                (userChoice === 'stone' && computerChoice === 'scissor') ||
+                (userChoice === 'paper' && computerChoice === 'stone') ||
+                (userChoice === 'scissor' && computerChoice === 'paper')
+            ) {
+                result = "You win!";
+                userScore++;
+            } else {
+                result = "Computer wins!";
+                computerScore++;
+            }
+
+            document.getElementById("winner").textContent = `Result: ${result}`;
+            document.getElementById("user-score").textContent = userScore;
+            document.getElementById("computer-score").textContent = computerScore;
+        }
+    </script>
+
+</body>
+</html>

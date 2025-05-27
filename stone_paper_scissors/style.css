@@ -1,0 +1,70 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #b2fefa, #0ed2f7);
+    text-align: center;
+    padding: 50px 20px;
+    margin: 0;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #004d40;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px #a7ffeb;
+}
+
+.game-container {
+    margin: 30px 0;
+}
+
+button {
+    font-size: 1.2rem;
+    padding: 12px 24px;
+    margin: 10px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    background: linear-gradient(to right, #26c6da, #00acc1);
+    color: white;
+    transition: transform 0.2s, box-shadow 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.result {
+    margin-top: 30px;
+    font-size: 1.3rem;
+    color: #004d40;
+    background-color: #ffffffaa;
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.score-board {
+    margin: 40px auto;
+    border-collapse: collapse;
+    width: 60%;
+    font-size: 1.2rem;
+    border: 3px solid #004d40;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.score-board th,
+.score-board td {
+    border: 1px solid #004d40;
+    padding: 14px 20px;
+    text-align: center;
+    background-color: #e0f2f1;
+}
+
+.score-board th {
+    background-color: #4db6ac;
+    color: #fff;
+}
